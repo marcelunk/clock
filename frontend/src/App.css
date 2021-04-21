@@ -1,0 +1,39 @@
+@import "./components/Buttons.css";
+@import "./components/Clock.css";
+@import "./components/NewYork.css";
+@import "./components/Germany.css";
+@import "./components/AddOne.css";
+
+
+/* Color variables */
+/*
+:root {
+  --button--fill: hsla(0, 0%, 0%, 0.03);
+  --background--fill0: hsla(0, 0%, 99%, 1);
+  --background--fill1: #f7f7f7;
+  --text--primary: #1a1a1a;
+  --yellow: #ffc533;
+}
+*/
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 200px 4fr 1fr 1fr 1fr 200px;
+    /* grid-template-columns: repeat(12, 1fr); */
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-items: center;
+    
+    padding-right: 40px;
+    padding-left: 40px;
+    height: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+}

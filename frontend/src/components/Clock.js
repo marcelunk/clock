@@ -5,10 +5,10 @@ import LiveClock from 'react-live-clock';
 export default function Clock(props) {
     return (
         <div className="clock">            
-            <LiveClock
-                format={"HH:mm:ss"}
-                ticking={true}
-                timezone={"MESZ"} />
+            <LiveClock 
+                format={"HH:mm:ss"} 
+                ticking={true} 
+                timezone={props.timezone} />
         </div>
     )
 }

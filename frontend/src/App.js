@@ -1,16 +1,16 @@
+import React, { useState } from 'react';
 import "./App.css";
 import Clock from "./components/Clock";
 import Button from "./components/Button";
-import Germany from "./components/Germany";
-import NewYork from "./components/NewYork";
-import AddOne from "./components/AddOne";
 
 function App() {
+  const [timezone, setTimezone] = useState("Europe/Berlin");
+
   return (
     <div className="grid">
-      <Clock />
-      <Button display="NY" />
-      <Button display="D" />
+      <Clock timezone={timezone} />
+      <Button display="NY" setTimeZone={setTimezone}/>
+      <Button display="D" setTimeZone={setTimezone}/>
       <Button display="1+" />
     </div>
   )

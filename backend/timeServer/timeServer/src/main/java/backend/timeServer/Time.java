@@ -7,19 +7,32 @@ import java.util.TimeZone;
  * @author Marcel Unkauf
  */
 public class Time {
+    private final String timeZone;
 
-    public static String getGermanTime(){
+    //Europe/Berlin
+    //America/New_York
+    public Time(String timeZone) {
+        switch(timeZone) {
+            case "NewYork":
+                this.timeZone = getNewYorkTime();
+                break;
+            case "Germany":
+            default:
+                this.timeZone = getGermanTime();
+        }
+    }
+
+    public String getTimeZone() {
+        return timeZone;
+    }
+
+    private String getGermanTime() {
         TimeZone tz = TimeZone.getTimeZone("Germany/Berlin");
         return tz.getDisplayName();
     }
     
-    public static String getNewYorkTime(){
+    private String getNewYorkTime() {
         TimeZone tz = TimeZone.getTimeZone("America/New_York");
         return tz.getDisplayName();
-    }
-
-    public static String addOneHour(){
-        // What time zone is running currently? -> Add one hour
-        return null;
     }
 }

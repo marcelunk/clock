@@ -1,4 +1,4 @@
-@import "./components/Buttons.css";
+@import "./components/Button.css";
 @import "./components/Clock.css";
 @import "./components/NewYork.css";
 @import "./components/Germany.css";
@@ -24,16 +24,11 @@ body,
 
 .grid {
     display: grid;
-    grid-template-columns: 200px 4fr 1fr 1fr 1fr 200px;
-    /* grid-template-columns: repeat(12, 1fr); */
+    grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 10px;
     justify-items: center;
-    
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-right: 200px;
+    padding-left: 200px;
     height: 100%;
-    max-width: 1200px;
-
-    margin: auto;
 }

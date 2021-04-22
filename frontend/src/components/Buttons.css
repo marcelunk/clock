@@ -1,6 +1,0 @@
-.buttons {
-    grid-column-start: 3;
-    grid-column-end: span 3;
-    grid-row-start: 2;
-    grid-row-end: span 1;
-}

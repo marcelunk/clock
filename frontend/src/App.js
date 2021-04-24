@@ -4,13 +4,13 @@ import Clock from "./components/Clock";
 import Button from "./components/Button";
 
 function App() {
-  const [timezone, setTimezone] = useState("Europe/Berlin");
+  const [timeZone, setTimeZone] = useState("Europe/Berlin");
 
   return (
     <div className="grid">
-      <Clock timezone={timezone} />
-      <Button display="NY" setTimeZone={setTimezone}/>
-      <Button display="D" setTimeZone={setTimezone}/>
+      <Clock timeZone={timeZone} />
+      <Button display="NY" timeZone="NewYork" setTimeZone={setTimeZone}/>
+      <Button display="D" timeZone="Germany" setTimeZone={setTimeZone}/>
       <Button display="1+" />
     </div>
   )

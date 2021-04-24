@@ -1,0 +1,4 @@
+gradlew bootRun
+
+deploy on netlify and heroku
+make unittests

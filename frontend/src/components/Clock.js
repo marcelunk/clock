@@ -8,7 +8,7 @@ export default function Clock(props) {
             <LiveClock 
                 format={"HH:mm:ss"} 
                 ticking={true} 
-                timezone={props.timezone} />
+                timezone={props.timeZone} />
         </div>
     )
 }

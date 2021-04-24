@@ -1,39 +1,23 @@
 package backend.timeServer;
 
-import java.util.TimeZone;
 import java.time.ZonedDateTime;
+import java.time.ZoneId;
 
 /**
- * 
+ *
  * @author Marcel Unkauf
  */
 public class Time {
-    private final String timezone;
+    private final int hour;
+    private final int minute;
+    private final int second;
 
     //Europe/Berlin
     //America/New_York
-    public Time(String timezone) {
-        switch(timezone) {
-            case "NewYork":
-                this.timezone = "America/New_York";  //getNewYorkTime();
-                break;
-            case "Germany":
-            default:
-                this.timezone = "Europe/Berlin";    //getGermanTime();
-        }
+    public Time(String timeZone) {
+      ZonedDateTime time = ZonedDateTime.now(ZoneId.of(timeZone));
+      this.hour = time.getHour();
+      this.minute = time.getMinute();
+      this.second = time.getSecond();
     }
-
-    public String getTimeZone() {
-        return timezone;
-    }
-
-    // private String getGermanTime() {
-    //     TimeZone tz = TimeZone.getTimeZone("Germany/Berlin");
-    //     return tz.getDisplayName();
-    // }
-    
-    // private String getNewYorkTime() {
-    //     TimeZone tz = TimeZone.getTimeZone("America/New_York");
-    //     return tz.getDisplayName();
-    // }
 }

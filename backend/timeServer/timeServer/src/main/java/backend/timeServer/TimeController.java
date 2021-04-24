@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class TimeController {
 
     @GetMapping("/timezone")
-    public Time timeZone(@RequestParam(value="timezone", defaultValue = "Germany") String timeZone) {
+    public Time timeZone(@RequestParam(value="timezone", defaultValue = "Europe/Berlin") String timeZone) {
         return new Time(timeZone);
     }
 

@@ -8,12 +8,12 @@ function App() {
 
   return (
     <div className="grid">
-      <Clock timeZone={timeZone} />
+      <Clock />
       <Button display="NY" timeZone="NewYork" setTimeZone={setTimeZone}/>
       <Button display="D" timeZone="Germany" setTimeZone={setTimeZone}/>
       <Button display="1+" />
     </div>
-  )
+  );
 }
 
 export default App;

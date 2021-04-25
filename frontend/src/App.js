@@ -9,7 +9,7 @@ export default function App() {
   const initialTime = {
     hour: 0,
     minute: 0,
-    seconds: 0,
+    second: 0,
   }
   
   const [time, setTime] = useState(initialTime);
@@ -17,9 +17,9 @@ export default function App() {
   return (
     <div className="grid">
       <Clock time={time} setTime={setTime} />
-      <Button display="NY" region="America" city="New_York" setRegion={this.setRegion} setCity={this.setCity} setHour={this.setHour} setMinute={this.setMinute} setSecond={this.setSecond} />
+      {/* <Button display="NY" region="America" city="New_York" setRegion={this.setRegion} setCity={this.setCity} setHour={this.setHour} setMinute={this.setMinute} setSecond={this.setSecond} />
       <Button display="D" region="Europe" city="Berlin" setRegion={this.setRegion} setCity={this.setCity} setHour={this.setHour} setMinute={this.setMinute} setSecond={this.setSecond} />
-      <AddHourButton display="1+" hour={this.state.hour} setHour={this.setHour} />
+      <AddHourButton display="1+" hour={this.state.hour} setHour={this.setHour} /> */}
     </div>
   );
 }

@@ -1,11 +1,11 @@
 import "./Clock.css";
 import React from 'react';
 
-export default function Clock(props) {
+export default function Hour(props) {
 
     return (
         <div className="clock">            
-            { props.hour + ":" + props.minute + ":" + props.second }
+            { props.hour }
         </div>
     )
 }

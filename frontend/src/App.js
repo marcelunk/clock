@@ -2,7 +2,7 @@ import React, { Component, useState } from 'react';
 import "./App.css";
 import Clock from "./components/Clock";
 import Button from "./components/Button";
-import AddHourButton from './components/AddHourButton';
+import AddHourButton from "./components/AddHourButton";
 
 class App extends Component {
   constructor(props){
@@ -39,6 +39,10 @@ class App extends Component {
     });
   }
 
+  componentWillMount() {
+    
+  }
+
   componentDidMount() {
     setInterval(() => {
         if (this.state.second >= 59) {
@@ -61,9 +65,7 @@ class App extends Component {
   render() {
     return (
       <div className="grid">
-        <div className="clock">            
-            { this.state.hour + ":" + this.state.minute + ":" + this.state.second }
-        </div>
+        <Clock hour={this.state.hour} minute={this.state.minute} second={this.state.second} />
         <Button display="NY" region="America" city="New_York" setRegion={this.setRegion} setCity={this.setCity} setHour={this.setHour} setMinute={this.setMinute} setSecond={this.setSecond} />
         <Button display="D" region="Europe" city="Berlin" setRegion={this.setRegion} setCity={this.setCity} setHour={this.setHour} setMinute={this.setMinute} setSecond={this.setSecond} />
         <AddHourButton display="1+" hour={this.state.hour} />

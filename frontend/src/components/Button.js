@@ -21,14 +21,8 @@ export default function Button(props) {
                 props.setHour(data.hour);
                 props.setMinute(data.minute);
                 props.setSecond(data.second);
-                setTimeZone();
             })
             .catch(error => console.log(error))
-    }
-
-    function setTimeZone() {
-        props.setRegion(props.region);
-        props.setCity(props.city);
     }
 
     return (

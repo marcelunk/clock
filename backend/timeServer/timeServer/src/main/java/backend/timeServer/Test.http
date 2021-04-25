@@ -1,9 +1,24 @@
 
-# GET http://localhost:8080/timezone
+# GET http://localhost:8080/time
 
-GET http://localhost:8080/timezone?timezone=America/NewYork
+# GET http://localhost:8080/time?timezone=America/NewYork
 
-# GET http://localhost:8080/timezone?timezone=Europe/Berlin
+# GET http://localhost:8080/time?timezone=Europe/Berlin
 
 # GET http://localhost:8080/addOneHour
 
+# POST http://localhost:8080/time HTTP/1.1
+# content-type: application/json
+
+# {
+#     "region": "America",
+#     "city": "New_York"
+# }
+
+POST http://localhost:8080/time HTTP/1.1
+content-type: application/json
+
+{
+    "region": "Europe",
+    "city": "Berlin"
+}

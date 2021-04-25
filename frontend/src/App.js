@@ -39,10 +39,6 @@ class App extends Component {
     });
   }
 
-  componentWillMount() {
-    
-  }
-
   componentDidMount() {
     setInterval(() => {
         if (this.state.second >= 59) {
@@ -58,17 +54,13 @@ class App extends Component {
     }, 1000);
   }
 
-  // componentWillUnmount() {
-  //   clearInterval(this.interval);
-  // }
-
   render() {
     return (
       <div className="grid">
         <Clock hour={this.state.hour} minute={this.state.minute} second={this.state.second} />
         <Button display="NY" region="America" city="New_York" setRegion={this.setRegion} setCity={this.setCity} setHour={this.setHour} setMinute={this.setMinute} setSecond={this.setSecond} />
         <Button display="D" region="Europe" city="Berlin" setRegion={this.setRegion} setCity={this.setCity} setHour={this.setHour} setMinute={this.setMinute} setSecond={this.setSecond} />
-        <AddHourButton display="1+" hour={this.state.hour} />
+        <AddHourButton display="1+" hour={this.state.hour} setHour={this.setHour} />
       </div>
     );
   }

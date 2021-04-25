@@ -1,7 +1,12 @@
 import "./Clock.css";
-import React from 'react';
+import React, { useEffect } from 'react';
 
 export default function Clock(props) {
+
+    useEffect(() => {
+
+        }
+    );
 
     return (
         <div className="clock">            

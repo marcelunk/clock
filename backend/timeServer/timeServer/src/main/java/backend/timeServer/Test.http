@@ -27,5 +27,5 @@ POST http://localhost:8080/addhour HTTP/1.1
 content-type: application/json
 
 {
-    "hour": 3
+    "hour": 23
 }

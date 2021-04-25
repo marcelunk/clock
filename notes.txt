@@ -8,3 +8,5 @@ get default time from server
 button mit aktiver timezone hat eine prominente Farbe
 
 backend keeps track of timezone in use
+
+props.setTimeZone(data.timeZone)

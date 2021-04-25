@@ -1,21 +1,21 @@
 package backend.timeServer;
 
-public class Hour {
+public class AddHour {
     private int hour;
 
-    public Hour(int hour) {
-        computeHour(hour);
+    public AddHour() {   
+    }
+
+    public AddHour(int hour) {
+        this.hour = hour;
     }
 
     public int getHour() {
+        this.hour = (hour+1)%25;
         return this.hour;
     }
 
     public void setHour(int hour) {
         this.hour = hour;
-    }
-
-    private void computeHour(int hour) {
-        this.hour = hour%24;
     }
 }

@@ -11,16 +11,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TimeController {
 
-    // @GetMapping("/timezone")
-    // public Time timeZone(@RequestParam(value="timezone", defaultValue = "Europe/Berlin") String timeZone) {
-    //     return new Time(timeZone);
-    // }
-
     @PostMapping(value = "/time", consumes = "application/json", produces = "application/json")
     public Time timeZone(@RequestBody TimeZone zone) {
         return new Time(zone.getRegion() + "/" + zone.getCity());
     }
 
-    // @GetMapping("/addOneHour")
-    // public int 
+    @PostMapping(value = "/addhour", consumes = "application/json", produces = "application/json")
+    public Hour timeZone(@RequestBody int hour) {
+        return new Hour(hour + 1);
+    }
 }

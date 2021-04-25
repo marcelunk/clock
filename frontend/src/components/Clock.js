@@ -6,9 +6,9 @@ class Clock extends React.Component {
         super(props);
 
         this.state = {
-            hour: props.hour,
-            minute: props.minute,
-            second: props.second,
+            hour: this.props.state.hour,
+            minute: this.props.state.minute,
+            second: this.props.state.second,
         };
     }
 

@@ -1,16 +1,25 @@
 import "./Clock.css";
-import React, { useEffect } from 'react';
+import React, { useEffect, usePrevious } from 'react';
 
-export default function Clock(props) {
+export default function Clock({time, setTime}) {
+
+    usePrevious = (value) => {
+        const ref = useRef();
+        useEffect(() => {
+            ref.current = value;
+        });
+        return ref.current;
+    }
+
+    const previousTime = usePrevious(time);
 
     useEffect(() => {
-
-        }
-    );
+        
+    });
 
     return (
         <div className="clock">            
-            { props.hour + ":" + props.minute + ":" + props.second }
+            { time.hour + ":" + time.minute + ":" + time.second }
         </div>
     )
 }

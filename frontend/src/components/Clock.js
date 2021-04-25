@@ -1,61 +1,47 @@
 import "./Clock.css";
 import React, { useEffect, usePrevious, useRef } from 'react';
 
-export default function Clock({time, setTime}) {
+export default function Clock({hour, minute, second, setHour, setMinute, setSecond}) {
 
     const usePrevious = (value) => {
         const ref = useRef();
-        console.log(ref);
         useEffect(() => {
             ref.current = value;
         });
-        return ref;
+        return ref.current;
     }
 
-    console.log(time);
+    const prevHour = usePrevious(hour);
+    const prevMinute = usePrevious(minute);
+    const prevSecond = usePrevious(second);
 
-    const prevTime = usePrevious(time);
+    console.log(prevSecond)
 
     useEffect(() => {
         setInterval(() => {
-            if (time.second >= 59) {
-                let newTime = {
-                    hour: time.hour,
-                    minute: prevTime.minute + 1,
-                    second: 0,
-                }
-                setTime(newTime);                
+            if (second >= 59) {
+                setMinute(prevMinute + 1);
+                setSecond(0);               
             }
-            if (time.minute >= 59) {
-                let newTime = {
-                    hour: prevTime.hour + 1,
-                    minute: 0,
-                    second: 0,
-                }
-                setTime(newTime);
+            if (minute >= 59) {
+                setHour(prevHour + 1);
+                setMinute(0);
+                setSecond(0);
             }
-            if (time.hour >= 24) {
-                let newTime = {
-                    hour: 0,
-                    minute: 0,
-                    second: 0,
-                }
-                setTime(newTime);
+            if (hour >= 24) {
+                setHour(0);
+                setMinute(0);
+                setSecond(0);
             }
-            let newTime = {
-                hour: 0,
-                minute: 0,
-                second: prevTime.second + 1,
-            }
+            setSecond(prevSecond + 1);
             // console.log(time.hour +":"+time.minute +":"+time.second);
-            setTime(newTime);
         }, 1000);
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [second]);
 
     return (
         <div className="clock">            
-            { time.hour + ":" + time.minute + ":" + time.second }
+            { hour + ":" + minute + ":" + second }
         </div>
     )
 }

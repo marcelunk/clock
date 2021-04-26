@@ -13,8 +13,6 @@ export default function Clock({hour, minute, second, setHour, setMinute, setSeco
 
     const prevSecond = usePrevious(second);
 
-    // console.log(prevSecond)
-
     useEffect(() => {
         const interval = setInterval(() => {
             setSecond(second => second + 1);

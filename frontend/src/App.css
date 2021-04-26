@@ -1,31 +1,24 @@
 @import "./components/Button.css";
 @import "./components/Clock.css";
-
-
-/* Color variables */
-/*
-:root {
-  --button--fill: hsla(0, 0%, 0%, 0.03);
-  --background--fill0: hsla(0, 0%, 99%, 1);
-  --background--fill1: #f7f7f7;
-  --text--primary: #1a1a1a;
-  --yellow: #ffc533;
-}
-*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 
 html,
 body,
 #root {
     height: 100%;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 32px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 10px;
-    justify-items: center;
-    padding-right: 200px;
-    padding-left: 200px;
-    height: 100%;
+.parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.buttonsParent {
+  display: flex;
+  flex-flow: row wrap;
 }

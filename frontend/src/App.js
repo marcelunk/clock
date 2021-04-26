@@ -5,14 +5,15 @@ import Button from "./components/Button";
 import AddHourButton from "./components/AddHourButton";
 
 export default function App() {
+  const buttons = [
+    {display:"D", region:"Europe", city:"Berlin"},
+    {display:"NY", region:"America", city:"New_York"},
+  ]
+  
   const [hour, setHour] = useState(0);
   const [minute, setMinute] = useState(0);
   const [second, setSecond] = useState(0);
-
-  const buttons = [
-    {display:"NY", region:"America", city:"New_York"},
-    {display:"D", region:"Europe", city:"Berlin"},
-  ]
+  const [activeButton, setActive] = useState(buttons[0].display);
 
   useEffect(() => {
     getTime("Europe", "Berlin");
@@ -37,12 +38,14 @@ export default function App() {
   }
   
   return (
-    <div className="grid">
+    <div className="parent">
       <Clock hour={hour} setHour={setHour} minute={minute} setMinute={setMinute} second={second} setSecond={setSecond} />
-      {buttons.map((button) => (
-        <Button key={button.display} display={button.display} region={button.region} city={button.city} getTime={getTime} /> 
-      ))}
-      <AddHourButton display="1+" hour={hour} setHour={setHour} />
+      <div className="buttonsParent">
+        {buttons.map((button) => (
+          <Button key={button.display} display={button.display} region={button.region} city={button.city} getTime={getTime} active={activeButton} setActive={setActive}/> 
+        ))}
+        <AddHourButton display="1+" hour={hour} setHour={setHour} />
+      </div>
     </div>
   );
 }

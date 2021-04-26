@@ -10,6 +10,7 @@ public class TimeZone {
     }
 
     public String getRegion() {
+        System.out.println("From TimeZone: " + region);
         return this.region;
     }
 

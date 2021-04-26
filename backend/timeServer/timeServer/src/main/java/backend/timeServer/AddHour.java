@@ -11,7 +11,9 @@ public class AddHour {
     }
 
     public int getHour() {
+        System.out.println("From Hour.java: " + this.hour);
         this.hour = (hour+1)%25;
+        System.out.println("From Hour.java: " + this.hour);
         return this.hour;
     }
 

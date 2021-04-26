@@ -11,37 +11,31 @@ export default function Clock({hour, minute, second, setHour, setMinute, setSeco
         return ref.current;
     }
 
-    const prevHour = usePrevious(hour);
-    const prevMinute = usePrevious(minute);
     const prevSecond = usePrevious(second);
 
-    console.log(prevSecond)
+    // console.log(prevSecond)
 
     useEffect(() => {
-        setInterval(() => {
-            if (second >= 59) {
-                setMinute(prevMinute + 1);
-                setSecond(0);               
-            }
-            if (minute >= 59) {
-                setHour(prevHour + 1);
-                setMinute(0);
+        const interval = setInterval(() => {
+            setSecond(second => second + 1);
+            if(second >= 59) {
                 setSecond(0);
+                setMinute(minute => minute + 1);
+                if(minute >= 59) {
+                    setMinute(0);
+                    setHour(hour => hour + 1);
+                    if(hour >= 24) {
+                        setHour(0);
+                    }
+                }
             }
-            if (hour >= 24) {
-                setHour(0);
-                setMinute(0);
-                setSecond(0);
-            }
-            setSecond(prevSecond + 1);
-            // console.log(time.hour +":"+time.minute +":"+time.second);
         }, 1000);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [second]);
+        return () => clearInterval(interval);
+    }, [prevSecond]);
 
     return (
         <div className="clock">            
-            { hour + ":" + minute + ":" + second }
+            { ('0'+hour).slice(-2) + ":" + ('0'+minute).slice(-2) + ":" + ('0'+second).slice(-2) }
         </div>
     )
 }

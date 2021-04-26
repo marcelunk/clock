@@ -18,6 +18,7 @@ public class TimeController {
 
     @PostMapping(value = "/addhour", consumes = "application/json", produces = "application/json")
     public AddHour timeZone(@RequestBody AddHour hour) {
+        System.out.println(hour.getHour());
         return new AddHour(hour.getHour());
     }
 }

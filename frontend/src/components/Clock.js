@@ -1,5 +1,5 @@
 import "./Clock.css";
-import React, { useEffect, usePrevious, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 export default function Clock({hour, minute, second, setHour, setMinute, setSecond}) {
 

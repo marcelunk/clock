@@ -1,5 +1,5 @@
 import "./Button.css";
-import React, { useEffect } from "react";
+import React from "react";
 
 /**
  * Button which sets the clock to a specified time zone.

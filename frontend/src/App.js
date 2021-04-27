@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import "./App.css";
 import Clock from "./components/Clock";
 import TimeZoneButton from "./components/TimeZoneButton";
@@ -12,7 +12,7 @@ import AddHourButton from "./components/AddHourButton";
  */
 export default function App() {
   const buttons = [
-    {display:"D", region:"Europe", city:"Berlin"},
+    {display:"DE", region:"Europe", city:"Berlin"},
     {display:"NY", region:"America", city:"New_York"},
   ]
   

@@ -10,3 +10,6 @@ button mit aktiver timezone hat eine prominente Farbe
 backend keeps track of timezone in use
 
 props.setTimeZone(data.timeZone)
+
+//push subtree to heroku
+git subtree push --prefix backend/timeServer/timeServer heroku main

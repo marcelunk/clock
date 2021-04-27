@@ -6,6 +6,12 @@
  * Style sheet which defines the outer most and general styling of the application,
  * like the default typo and the relation of the components to each other (flex box).
  */
+ 
+ /*color variables*/
+:root {
+  --active-button-color: rgba(255, 133, 62, 0.801);
+  --button-background: rgba(187, 187, 187, 0.767);
+}
 
 html,
 body,
@@ -26,4 +32,10 @@ body,
 .buttonsParent {
   display: flex;
   flex-flow: row wrap;
+}
+
+@media only screen and (max-width: 830px) {
+  .buttonsParent {
+    flex-direction: column;
+  }
 }

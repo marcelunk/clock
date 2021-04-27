@@ -3,6 +3,11 @@ package backend.timeServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Spring Boot server.
+ * 
+ * @author Marcel Unkauf
+ */
 @SpringBootApplication
 public class TimeServerApplication {
 

@@ -2,6 +2,11 @@
 @import "./components/Clock.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
 
+/**
+ * Style sheet which defines the outer most and general styling of the application,
+ * like the default typo and the relation of the components to each other (flex box).
+ */
+
 html,
 body,
 #root {

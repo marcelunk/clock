@@ -1,5 +1,10 @@
+/**
+ * Style sheet mostly to define the size of the actual clock.
+ */
+
 .clock {
     padding-left: 100px;
     padding-right: 100px;
     margin-right: 5px;
+    font-size: 60px;
 }

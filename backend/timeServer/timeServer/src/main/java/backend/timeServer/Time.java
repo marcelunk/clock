@@ -4,7 +4,9 @@ import java.time.ZonedDateTime;
 import java.time.ZoneId;
 
 /**
- *
+ * Time object which represents the time of a day in a specified time zone.
+ * Time zones are specified by IDs like: "Europe/Berlin".
+ * 
  * @author Marcel Unkauf
  */
 public class Time {

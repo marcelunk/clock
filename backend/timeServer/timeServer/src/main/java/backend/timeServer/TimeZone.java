@@ -1,5 +1,10 @@
 package backend.timeServer;
 
+/**
+ * A TimeZone object which denotes a specific time zone.
+ * 
+ * @author Marcel Unkauf
+ */
 public class TimeZone {
     private String region;
     private String city;
@@ -10,7 +15,6 @@ public class TimeZone {
     }
 
     public String getRegion() {
-        System.out.println("From TimeZone: " + region);
         return this.region;
     }
 

@@ -1,9 +1,15 @@
 import React, { Component, useEffect, useState } from 'react';
 import "./App.css";
 import Clock from "./components/Clock";
-import Button from "./components/Button";
+import TimeZoneButton from "./components/TimeZoneButton";
 import AddHourButton from "./components/AddHourButton";
 
+/**
+ * A clock which communicates with a time server through user input.
+ * 
+ * @returns {HTMLDivElement}
+ * @author Marcel Unkauf
+ */
 export default function App() {
   const buttons = [
     {display:"D", region:"Europe", city:"Berlin"},
@@ -42,7 +48,7 @@ export default function App() {
       <Clock hour={hour} setHour={setHour} minute={minute} setMinute={setMinute} second={second} setSecond={setSecond} />
       <div className="buttonsParent">
         {buttons.map((button) => (
-          <Button key={button.display} display={button.display} region={button.region} city={button.city} getTime={getTime} active={activeButton} setActive={setActive}/> 
+          <TimeZoneButton key={button.display} display={button.display} region={button.region} city={button.city} getTime={getTime} active={activeButton} setActive={setActive}/> 
         ))}
         <AddHourButton display="1+" hour={hour} setHour={setHour} />
       </div>

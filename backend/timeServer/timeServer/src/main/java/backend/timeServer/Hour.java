@@ -1,5 +1,10 @@
 package backend.timeServer;
 
+/**
+ * Representation of an hour of the day.
+ * 
+ * @author Marcel Unkauf
+ */
 public class Hour {
     private int hour;
 

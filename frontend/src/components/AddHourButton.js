@@ -1,6 +1,16 @@
 import "./Button.css";
 import React from "react";
 
+/**
+ * Button which adds an hour to the current time.
+ * 
+ * @param {string} display  The text displayed on the button. 
+ * @param {integer} hour    The current hour of the clock.
+ * @param {function} setHour    Setter to change the hour of the clock.
+ * @returns {HTMLDivElement}
+ * @author Marcel Unkauf
+ */
+
 export default function AddHourButton({display, hour, setHour}) {
 
     function addHour(hour) {

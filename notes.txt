@@ -13,3 +13,6 @@ props.setTimeZone(data.timeZone)
 
 //push subtree to heroku
 git subtree push --prefix backend/timeServer/timeServer heroku main
+
+
+java -jar .\timeServer-0.0.1-SNAPSHOT.jar

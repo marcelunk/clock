@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Spring Boot server.
+ * Spring Boot time server.
  * 
  * @author Marcel Unkauf
  */

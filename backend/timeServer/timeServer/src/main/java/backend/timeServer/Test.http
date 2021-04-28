@@ -23,9 +23,17 @@
 #     "city": "Berlin"
 # }
 
-POST http://localhost:8080/addhour HTTP/1.1
+# POST http://localhost:8080/addhour HTTP/1.1
+# content-type: application/json
+
+# {
+#     "hour": 23
+# }
+
+POST http://localhost:8080/time HTTP/1.1
 content-type: application/json
 
 {
-    "hour": 23
+    "region": "Europe",
+    "city": "Berlin"
 }
